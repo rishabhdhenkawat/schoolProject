@@ -1,0 +1,28 @@
+body
+{
+    background-color: rgb(67, 136, 136);
+}
+.btn1{
+    background-color: #fff;
+   
+    margin-top: 40px; 
+    padding: 0px 10px 0px 10px;
+}
+.btn2{
+    background-color: #fff;
+}
+.log{
+   margin: 200px 0px 0px 50px;
+}
+.buttonall
+{
+    margin-left: 60px;
+}
+.userpass
+{
+    margin-top: 50px;
+}
+.table
+{
+    margin: 20px;
+}

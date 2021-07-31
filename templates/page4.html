@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page-2</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="page4.css">
+</head>
+<body>
+    <div class="row buttonall">
+        <div class="col-lg-2"> <button type="button" class="btn btn1 btn-outline-primary "onclick='location.href="{{url_for('page3')}}"' >Complaintant <br> Record</button></div>
+        <div class="col-lg-2">  <button type="button" class="btn btn1 btn-outline-primary" onclick='location.href="{{url_for('page4')}}"'>Complaints<br> Record</button></div>
+         <div class="col-lg-2"> <button type="button" class="btn btn1 btn-outline-primary" onclick='location.href="{{url_for('page5')}}"'>Student <br> Volunteer</button></div>
+        <div class="col-lg-2"> <button type="button" class="btn btn1 btn-outline-primary" onclick='location.href="{{url_for('faculty')}}"'>Faculty <br> Coordinator</button></div>
+        <div class="col-lg-2"> <button type="button" class="btn btn1 btn-outline-primary" onclick='location.href="{{url_for('report')}}"'>Report <br> Generation</button></div>
+        <div class="col-lg-2"> <button type="button" class="btn btn1 btn-outline-primary"  onclick='location.href="{{url_for('logout')}}"'>Logout<br>Main</button></div>
+       </div>
+
+       <div class="input-group mb-3 userpass" >
+        <input type="text" class="form-control" placeholder="Search here" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn2 btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        </div>
+      </div>
+<!-- table-->
+
+<table class="table table-bordered table-light" style="width: 1401px;">
+    <thead>
+      <tr>
+        <th scope="col">Complaintant ID </th>
+        <th scope="col">Name</th>
+        <th scope="col">Department</th>
+        <th scope="col">Mobile</th>
+        <th scope="col">Complaintant Title</th>
+        <th scope="col">Date of Complaintant</th>
+        <th scope="col">Status</th>
+        <th scope="col">Documents</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for value in myData%}
+      <tr>
+        <td>{{ value[0] }}</td>
+        <td>{{ value[1] }}</td>
+        <td>{{ value[2] }}</td>
+        <td>{{ value[3] }}</td>
+        <td>{{ value[4] }}</td>
+        <td>{{ value[5] }}</td>
+        <td>{{ value[6] }}</td>
+        <td>{{ value[7] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <!--table-->
+  
+</body>
+</html>

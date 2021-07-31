@@ -1,0 +1,17 @@
+body
+{
+    background-color: rgb(67, 136, 136);
+}
+.btn{
+    background-color: #fff;
+    position: relative;
+    margin-top: 150px; 
+    padding: 50px;
+}
+.log{
+   margin: 200px 0px 0px 50px;
+}
+.buttonall
+{
+    margin-left: 60px;
+}

@@ -1,0 +1,63 @@
+body
+{
+    background-color: rgb(67, 136, 136);
+}
+.btn1{
+    background-color: #fff;
+   
+    margin-top: 40px; 
+    padding: 0px 10px 0px 10px;
+}
+.btn2{
+    background-color: #fff;
+}
+.log{
+   margin: 200px 0px 0px 50px;
+}
+.buttonall
+{
+    margin-left: 60px;
+}
+.userpass
+{
+    margin-top: 50px;
+}
+.table
+{
+    margin: 20px;
+}
+.allfield
+{
+   padding-left: 40px; 
+}
+.lowerbtn
+{
+    padding-left: 700px;
+
+}
+.btn2{
+    padding: 2px 30px 2px 30px;
+}
+.upload-btn-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+  }
+  
+  .btn3 {
+    border: 2px solid gray;
+    color: gray;
+    background-color: white;
+    padding: 8px 20px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .upload-btn-wrapper input[type=file] {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+  }

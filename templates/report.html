@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>page-5</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+    <div class="row buttonall">
+      <div class="col-lg-2"> <button type="button" class="btn btn1 btn-outline-primary " onclick='location.href="{{url_for('page3')}}"' >Complaintant <br> Record</button></div>
+      <div class="col-lg-2">  <button type="button" class="btn btn1 btn-outline-primary" onclick='location.href="{{url_for('page4')}}"'  >Complaints<br> Record</button></div>
+       <div class="col-lg-2"> <button type="button" class="btn btn1 btn-outline-primary" onclick='location.href="{{url_for('page5')}}"'>Student <br> Volunteer</button></div>
+      <div class="col-lg-2"> <button type="button" class="btn btn1 btn-outline-primary" onclick='location.href="{{url_for('faculty')}}"'>Faculty <br> Coordinator</button></div>
+      <div class="col-lg-2"> <button type="button" class="btn btn1 btn-outline-primary" onclick='location.href="{{url_for('report')}}"'>Report <br> Generation</button></div>
+      <div class="col-lg-2"> <button type="button" class="btn btn1 btn-outline-primary" onclick='location.href="{{url_for('logout')}}"'>Logout<br>Main</button></div>
+       </div>
+
+       <div class="input-group mb-3 userpass" >
+        <input  type="text" class="form-control" placeholder="Search here" aria-label="Recipient's username" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn2 btn-outline-secondary" type="button" id="button-addon2">Search</button>
+        </div>
+      </div>
+<!-- table-->
+
+<table class="table table-bordered table-light" >
+    <thead>
+      <tr>
+        {% for i in headings%}
+      
+        <th scope="col">{{i}} </th>
+        
+      {% endfor %}  
+      </tr>
+    </thead>
+    <tbody>
+      {% for value in myData%}
+      <tr>
+        <td>{{ value[0] }}</td>
+        <td>{{ value[1] }}</td>
+        <td>{{ value[2] }}</td>
+        <td>{{ value[3] }}</td>
+        <td>{{ value[4] }}</td>
+        <td>{{ value[5] }}</td>
+        <td>{{ value[6] }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  <!--table-->
+ 
+  <form class=" allfield">
+    
+     <div class="row">
+       <div class="form-group form1-2 col-lg-6">
+      <label for="exampleInputEmail1">Complaint ID</label>
+      <input type="input" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter ID" style="width: 400px;">
+      
+    </div>
+    <div class="form-group form1-2 col-lg-6">
+      <label for="exampleInputPassword1">Complaint Name </label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="E-mail" style="width: 400px;">
+    </div> 
+   
+    <div class="form-group form1-2 col-lg-6">
+      <label for="exampleInputPassword1">Complaintant ID</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Department" style="width: 400px;">
+    </div> 
+ 
+    <div class="form-group form1-2 col-lg-6">
+      <label for="exampleInputPassword1">Complaintant name</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Complaintant name" style="width: 400px;">
+    </div> 
+
+    <div class="form-group form1-2 col-lg-6">
+      <label for="exampleInputPassword1">Date filled</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Date filled" style="width: 400px;">
+    </div> 
+
+    <div class="form-group form1-2 col-lg-6">
+      <label for="exampleInputPassword1">Date closed</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Date closed" style="width: 400px;">
+    </div> 
+     <h4>Report file</h4>
+    <div class="input-group col-lg-4" >
+      <div class="custom-file">
+        <input type="file"  class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+        <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+      </div>
+      <div class="input-group-append">
+        <button class="btn btn-outline-primary" style="background-color: white;" type="button" id="inputGroupFileAddon04">Submit</button>
+      </div>
+    </div>
+    </div>
+  
+  </form>
+
+  <div class="lowerbtn row">
+    <div class="col-lg-2"> <button type="button" class="btn btn1 btn2 btn-outline-primary " >EDIT</button></div>
+    <div class="col-lg-2">  <button type="button" class="btn btn1 btn2 btn-outline-primary" >ADD</button></div>
+     <div class="col-lg-2"> <button type="button" class="btn btn1 btn2 btn-outline-primary">Delete</button></div>
+  </div><br><br>
+</body>
+</html>
